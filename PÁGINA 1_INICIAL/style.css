@@ -8,13 +8,19 @@ body {
 .hero {
     text-align: center;
     padding: 70px 20px;
-    background: rgba(0, 0, 0, 0.2);
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45)),
+        url("../IMAGENS DO SITE/fundo_tela_inicial.jpg") center/cover no-repeat;
 }
 
 .hero h1 {
     font-size: 2.2em;
     margin-bottom: 10px;
+    color: #f8fafc;
 }
 
 .hero p {
