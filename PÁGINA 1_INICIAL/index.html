@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Site - Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>I.A no cenário competitivo dos E-sports e Jogos em geral</h1>
+        <p>Veja como a inteligência artificial está transformando jogos, estratégias e a experiência dos fãs.</p>
+        <div class="app-menu-wrapper">
+            <div class="app-menu-card">
+                <p class="app-menu-text">Navegue pelo site com o menu abaixo:</p>
+                <button id="appMenuButton" class="app-menu-button" aria-label="Abrir menu de páginas">
+                    <span class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    Menu de páginas
+                </button>
+            </div>
+            <div id="appMenuPanel" class="app-menu-panel" role="menu">
+                <a href="index.html">Página Inicial</a>
+                <a href="../PAGINA 2/index.html">Página 2</a>
+                <a href="../PAGINA 3/index.html">Página 3</a>
+                <a href="../PAGINA 4/index.html">Página 4</a>
+                <a href="../PAGINA 5/index.html">Página 5</a>
+            </div>
+        </div>
+        <a class="btn" href="#sobre">Saiba mais</a>
+    </header>
+
+    <main class="container">
+        <section id="sobre" class="card">
+            <h2>Sobre o tema</h2>
+            <p>A inteligência artificial está cada vez mais presente na criação de jogos, na análise de partidas e até no suporte aos jogadores em tempo real.</p>
+        </section>
+
+        <section id="conteudo" class="card">
+            <h2>Por que isso importa?</h2>
+            <p>Com a IA, é possível melhorar a experiência do usuário, criar adversários mais inteligentes e entender melhor o desempenho dos times.</p>
+        </section>
+
+        <section id="contato" class="card">
+            <h2>Contato</h2>
+            <p>Este projeto pode ser expandido com imagens, vídeos, links e mais páginas.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Mini site criado com HTML e CSS</p>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('appMenuButton');
+        const menuPanel = document.getElementById('appMenuPanel');
+        menuButton.addEventListener('click', () => menuPanel.classList.toggle('open'));
+        document.addEventListener('click', (event) => {
+            if (!menuPanel.contains(event.target) && !menuButton.contains(event.target)) {
+                menuPanel.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

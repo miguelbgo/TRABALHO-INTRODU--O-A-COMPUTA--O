@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Site - Página 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>IA e E-sports em profundidade</h1>
+        <p>Explore exemplos e aplicações práticas da inteligência artificial no universo dos jogos eletrônicos.</p>
+        <div class="app-menu-wrapper">
+            <div class="app-menu-card">
+                <p class="app-menu-text">Navegue pelo site com o menu abaixo:</p>
+                <button id="appMenuButton" class="app-menu-button" aria-label="Abrir menu de páginas">
+                    <span class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    Menu de páginas
+                </button>
+            </div>
+            <div id="appMenuPanel" class="app-menu-panel" role="menu">
+                <a href="../PÁGINA 1_INICIAL/index.html">Página Inicial</a>
+                <a href="index.html">Página 2</a>
+                <a href="../PAGINA 3/index.html">Página 3</a>
+                <a href="../PAGINA 4/index.html">Página 4</a>
+                <a href="../PAGINA 5/index.html">Página 5</a>
+            </div>
+        </div>
+        <a class="btn" href="#topico">Ver mais</a>
+    </header>
+
+    <main class="container">
+        <section id="topico" class="card">
+            <h2>Como a IA ajuda nos jogos</h2>
+            <p>Algoritmos simulam adversários inteligentes, melhoram a experiência de usuário e auxiliam no desenvolvimento de estratégias de competição.</p>
+        </section>
+
+        <section id="extra" class="card">
+            <h2>Exemplos de uso</h2>
+            <p>Em jogos modernos, a IA pode adaptar a dificuldade, criar histórias personalizadas e até analisar dados de partidas para orientar treinamentos.</p>
+        </section>
+
+        <section class="card">
+            <h2>Próximo passo</h2>
+            <p>Você pode acrescentar imagens, vídeos e outros capítulos para deixar o site mais completo e informativo.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Voltando à página inicial do mini site.</p>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('appMenuButton');
+        const menuPanel = document.getElementById('appMenuPanel');
+        menuButton.addEventListener('click', () => menuPanel.classList.toggle('open'));
+        document.addEventListener('click', (event) => {
+            if (!menuPanel.contains(event.target) && !menuButton.contains(event.target)) {
+                menuPanel.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

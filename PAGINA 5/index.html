@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Site - Página 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Conclusão e próximos passos</h1>
+        <p>Esta página mostra como a IA conecta o conteúdo do site e prepara ideias para o futuro dos jogos.</p>
+        <div class="app-menu-wrapper">
+            <div class="app-menu-card">
+                <p class="app-menu-text">Navegue pelo site com o menu abaixo:</p>
+                <button id="appMenuButton" class="app-menu-button" aria-label="Abrir menu de páginas">
+                    <span class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    Menu de páginas
+                </button>
+            </div>
+            <div id="appMenuPanel" class="app-menu-panel" role="menu">
+                <a href="../PÁGINA 1_INICIAL/index.html">Página Inicial</a>
+                <a href="../PAGINA 2/index.html">Página 2</a>
+                <a href="../PAGINA 3/index.html">Página 3</a>
+                <a href="../PAGINA 4/index.html">Página 4</a>
+                <a href="index.html">Página 5</a>
+            </div>
+        </div>
+        <a class="btn" href="#topico">Ver mais</a>
+    </header>
+
+    <main class="container">
+        <section id="topico" class="card">
+            <h2>Resumo das páginas</h2>
+            <p>Aqui você vê um panorama das aplicações de IA nos games e como elas impactam jogadores e competições.</p>
+        </section>
+
+        <section id="planos" class="card">
+            <h2>O que fazer depois</h2>
+            <p>Adicione imagens, vídeos, estudos de caso ou outros temas para deixar o mini site ainda mais completo.</p>
+        </section>
+
+        <section class="card">
+            <h2>Obrigado pela visita</h2>
+            <p>Use a navegação acima para voltar à página inicial ou ir para qualquer outra página do site.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Mini site com menu comum em todas as páginas.</p>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('appMenuButton');
+        const menuPanel = document.getElementById('appMenuPanel');
+        menuButton.addEventListener('click', () => menuPanel.classList.toggle('open'));
+        document.addEventListener('click', (event) => {
+            if (!menuPanel.contains(event.target) && !menuButton.contains(event.target)) {
+                menuPanel.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Site - Página 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>IA e análise de desempenho</h1>
+        <p>Aprenda como a inteligência artificial ajuda a medir resultados, otimizar estratégias e criar estatísticas avançadas.</p>
+        <div class="app-menu-wrapper">
+            <div class="app-menu-card">
+                <p class="app-menu-text">Navegue pelo site com o menu abaixo:</p>
+                <button id="appMenuButton" class="app-menu-button" aria-label="Abrir menu de páginas">
+                    <span class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    Menu de páginas
+                </button>
+            </div>
+            <div id="appMenuPanel" class="app-menu-panel" role="menu">
+                <a href="../PÁGINA 1_INICIAL/index.html">Página Inicial</a>
+                <a href="../PAGINA 2/index.html">Página 2</a>
+                <a href="../PAGINA 3/index.html">Página 3</a>
+                <a href="index.html">Página 4</a>
+                <a href="../PAGINA 5/index.html">Página 5</a>
+            </div>
+        </div>
+        <a class="btn" href="#topico">Ver detalhes</a>
+    </header>
+
+    <main class="container">
+        <section id="topico" class="card">
+            <h2>Dados em tempo real</h2>
+            <p>Sistemas de IA podem analisar partidas e fornecer relatórios instantâneos sobre pontos fortes e fracos dos jogadores.</p>
+        </section>
+
+        <section id="infraestrutura" class="card">
+            <h2>Treinamento de equipes</h2>
+            <p>Técnicas de machine learning ajudam equipes a preparar estratégias e estudar oponentes em detalhes.</p>
+        </section>
+
+        <section class="card">
+            <h2>O futuro</h2>
+            <p>Esse tipo de análise ganha cada vez mais importância nos campeonatos de alto nível.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Página 4 com navegação para todas as páginas.</p>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('appMenuButton');
+        const menuPanel = document.getElementById('appMenuPanel');
+        menuButton.addEventListener('click', () => menuPanel.classList.toggle('open'));
+        document.addEventListener('click', (event) => {
+            if (!menuPanel.contains(event.target) && !menuButton.contains(event.target)) {
+                menuPanel.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

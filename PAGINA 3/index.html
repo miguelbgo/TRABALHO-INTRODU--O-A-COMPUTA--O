@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Site - Página 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>IA na criação de jogos</h1>
+        <p>Conheça como a inteligência artificial é usada para gerar mundos, personagens e mecânicas únicas.</p>
+        <div class="app-menu-wrapper">
+            <div class="app-menu-card">
+                <p class="app-menu-text">Navegue pelo site com o menu abaixo:</p>
+                <button id="appMenuButton" class="app-menu-button" aria-label="Abrir menu de páginas">
+                    <span class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    Menu de páginas
+                </button>
+            </div>
+            <div id="appMenuPanel" class="app-menu-panel" role="menu">
+                <a href="../PÁGINA 1_INICIAL/index.html">Página Inicial</a>
+                <a href="../PAGINA 2/index.html">Página 2</a>
+                <a href="index.html">Página 3</a>
+                <a href="../PAGINA 4/index.html">Página 4</a>
+                <a href="../PAGINA 5/index.html">Página 5</a>
+            </div>
+        </div>
+        <a class="btn" href="#topico">Ver exemplo</a>
+    </header>
+    <script>
+        const menuButton = document.getElementById('appMenuButton');
+        const menuPanel = document.getElementById('appMenuPanel');
+        menuButton.addEventListener('click', () => menuPanel.classList.toggle('open'));
+        document.addEventListener('click', (event) => {
+            if (!menuPanel.contains(event.target) && !menuButton.contains(event.target)) {
+                menuPanel.classList.remove('open');
+            }
+        });
+    </script>
+
+    <main class="container">
+        <section id="topico" class="card">
+            <h2>Mecânicas inteligentes</h2>
+            <p>Os desenvolvedores usam IA para criar inimigos que aprendem com o jogador e desafios mais dinâmicos.</p>
+        </section>
+
+        <section id="detalhes" class="card">
+            <h2>Ambientes adaptativos</h2>
+            <p>Ambientes de jogo podem reagir ao estilo do jogador, gerando caminhos, histórias e objetivos únicos.</p>
+        </section>
+
+        <section class="card">
+            <h2>O que vem depois?</h2>
+            <p>Você pode continuar o site com estudos de caso, imagens de jogos e explicações sobre cada tecnologia.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Mini site com navegação entre páginas.</p>
+    </footer>
+</body>
+</html>
