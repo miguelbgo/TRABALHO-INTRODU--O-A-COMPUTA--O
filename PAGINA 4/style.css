@@ -12,6 +12,28 @@ body {
     position: relative;
 }
 
+.top-nav {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.top-nav a {
+    color: #f8fafc;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.top-nav a:hover {
+    background: rgba(37, 99, 235, 0.75);
+}
+
 .hero h1 {
     font-size: 2.2em;
     margin-bottom: 10px;

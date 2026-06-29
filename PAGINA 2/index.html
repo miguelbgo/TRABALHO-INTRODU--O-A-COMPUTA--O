@@ -8,28 +8,15 @@
 </head>
 <body>
     <header class="hero">
+        <nav class="top-nav">
+            <a href="../PÁGINA 1_INICIAL/index.html">Inicio</a>
+            <a href="index.html">Cronologia</a>
+            <a href="../PAGINA 3/index.html">I.A vs Humanos</a>
+            <a href="../PAGINA 4/index.html">Aplicações</a>
+            <a href="../PAGINA 5/index.html">Sobre</a>
+        </nav>
         <h1>IA e E-sports em profundidade</h1>
         <p>Explore exemplos e aplicações práticas da inteligência artificial no universo dos jogos eletrônicos.</p>
-        <div class="app-menu-wrapper">
-            <div class="app-menu-card">
-                <button id="appMenuButton" class="app-menu-button" aria-label="Abrir menu de páginas">
-                    <span class="menu-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                    Menu de páginas
-                </button>
-            </div>
-            <div id="appMenuPanel" class="app-menu-panel" role="menu">
-                <a href="../PÁGINA 1_INICIAL/index.html">Página Inicial</a>
-                <a href="index.html">Página 2</a>
-                <a href="../PAGINA 3/index.html">Página 3</a>
-                <a href="../PAGINA 4/index.html">Página 4</a>
-                <a href="../PAGINA 5/index.html">Página 5</a>
-            </div>
-        </div>
     </header>
 
     <main class="container">
@@ -53,15 +40,5 @@
         <p>Mini Site criado por Discente UFMA</p>
     </footer>
 
-    <script>
-        const menuButton = document.getElementById('appMenuButton');
-        const menuPanel = document.getElementById('appMenuPanel');
-        menuButton.addEventListener('click', () => menuPanel.classList.toggle('open'));
-        document.addEventListener('click', (event) => {
-            if (!menuPanel.contains(event.target) && !menuButton.contains(event.target)) {
-                menuPanel.classList.remove('open');
-            }
-        });
-    </script>
 </body>
 </html>

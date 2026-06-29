@@ -17,6 +17,28 @@ body {
         url("../IMAGENS DO SITE/fundo_tela_inicial.jpg") center/cover no-repeat;
 }
 
+.top-nav {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.top-nav a {
+    color: #f8fafc;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.top-nav a:hover {
+    background: rgba(37, 99, 235, 0.75);
+}
+
 .hero h1 {
     font-size: 2.4em;
     margin-bottom: 13px;
@@ -29,99 +51,7 @@ body {
     line-height: 1.6;
     max-width: 650px;
     margin: 0 0 20px;
-}
-
-.app-menu-wrapper {
-    position: absolute;
-    top: 32px;
-    right: 24px;
-    display: flex;
-    justify-content: flex-end;
-    width: auto;
-    max-width: 320px;
-    z-index: 10;
-}
-
-.app-menu-card {
-    width: 100%;
-    padding: 16px 18px;
-    background: rgba(15, 23, 42, 0.9);
-    border: 1px solid rgba(148, 163, 184, 0.2);
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(8px);
-}
-
-.app-menu-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    padding: 12px 16px;
-    background: linear-gradient(135deg, #2563eb, #3b82f6);
-    border: none;
-    color: white;
-    font-size: 0.97em;
-    font-weight: 600;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.app-menu-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
-}
-
-.menu-icon {
-    display: inline-grid;
-    grid-template-columns: repeat(2, 6px);
-    grid-gap: 4px;
-}
-
-.menu-icon span {
-    display: block;
-    width: 6px;
-    height: 6px;
-    background: white;
-    border-radius: 2px;
-}
-
-.app-menu-panel {
-    position: absolute;
-    top: calc(100% + 12px);
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px);
-    width: 260px;
-    background: rgba(15, 23, 42, 0.98);
-    border: 1px solid rgba(148, 163, 184, 0.16);
-    border-radius: 18px;
-    padding: 12px 0;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.3);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 180ms ease, transform 180ms ease;
-    z-index: 20;
-}
-
-.app-menu-panel.open {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-    pointer-events: auto;
-}
-
-.app-menu-panel a {
-    display: block;
-    padding: 12px 18px;
-    color: #e2e8f0;
-    text-decoration: none;
-    font-size: 0.98em;
-}
-
-.app-menu-panel a:hover {
-    background: rgba(255, 255, 255, 0.08);
+    font-style: italic;
 }
 
 .container {
